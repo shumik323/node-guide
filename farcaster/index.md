@@ -24,17 +24,23 @@
 
 -  Отправляемся к [**Alchemy**](https://www.alchemy.com/) и регистрируем аккаунт
 -  Слева тыкаем на **Overview** и справа на **Create new app**
+
    <img src="./assets/2.png" alt="2" style="margin: 20px 0; object-fit: contain">
 -  Выбираем **Ethereum** и **Ethereum Mainnet**
 -  Снизу любое значение и тыкаем на **Create App**
+
    <img src="./assets/3.png" alt="3" style="margin: 20px 0; object-fit: contain">
 -  Cправа тыкаем на Api Key
+
    <img src="./assets/4.png" alt="4" style="margin: 20px 0; object-fit: contain">
 - Копируем HTTPS адрес и сохраняем в блокнот или другое надежное место
+
   <img src="./assets/5.png" alt="5" style="margin: 20px 0; object-fit: contain">
 - Повторяем все те же самые действия, только уже выбираем Optimism Mainnet
+
   <img src="./assets/6.png" alt="6" style="margin: 20px 0; object-fit: contain">
 - Сохраняем HTTPS адрес
+
   <img src="./assets/7.png" alt="7" style="margin: 20px 0; object-fit: contain">
 
 **Далее отправляемся к своему профилю Warpcast и нам нужно скопировать наш FID**
@@ -56,9 +62,12 @@
 -  Как только все установилось, у Вас появится такое окно с вводом "Ethereum Mainnet RPC URL". 
 -  Вставляем HTTP из Ethereum App, которое копировали в блокнот из Alchemy. 
 -  Далее жмем "Enter".
+
 <img src="./assets/8.png" alt="8" style="margin: 20px 0; object-fit: contain">
--  Таким же образом вставляем Optimism RPC.
--  Далее вставляем FID и жмем "Enter". Пойдет установка.
+
+- Таким же образом вставляем Optimism RPC.
+- Далее вставляем FID и жмем "Enter". Пойдет установка.
+
 <img src="./assets/9.png" alt="9" style="margin: 20px 0; object-fit: contain">
 
 -   Через пару минут появится логи — **значит всё гуд!**
@@ -90,6 +99,7 @@
     wget -qO- eth0.me
 
 У вас изначально в grafana будет No data и ничего не будет видно
+
 <img src="./assets/10.png" alt="10" style="margin: 20px 0; object-fit: contain">
 Но спустя несколько часов, у вас будет появляться графики и всё такое (смотрим фрейм за 24 часа)
 
@@ -133,7 +143,7 @@
     docker compose down
     docker compose up --build -d
 
-<br>
+
 <h3>FAQ</h3>
 
 **Обязательно к прочтению**, тут ответы на следующие вопросы:
