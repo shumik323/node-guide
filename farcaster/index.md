@@ -46,19 +46,27 @@
 <h3>Идем к терминалу:</h3>
 Выполняем команды:
 
-    1. sudo apt update -y 
-    
-    2. sudo apt install screen -y  
-    3. screen --version
-    4. screen -S Hubble
-    
-    5. curl -sSL https://download.thehubble.xyz/bootstrap.sh | bash
+    sudo apt update -y
+<br>
+
+    sudo apt install screen -y
+<br>
+
+    screen --version
+<br>
+
+    screen -S Hubble
+<br>
+
+    curl -sSL https://download.thehubble.xyz/bootstrap.sh | bash
 
 -  Как только все установилось, у Вас появится такое окно с вводом "Ethereum Mainnet RPC URL". 
--  Вставляем HTTP из Ethereum App, которое копировали в блокнот из Alchemy. 
--  Далее жмем "Enter".
 
 <img src="./assets/8.png" alt="8" style="margin: 20px 0; object-fit: contain">
+ 
+- Вставляем HTTP из Ethereum App, которое копировали в блокнот из Alchemy. 
+-  Далее жмем "Enter".
+
 
 - Таким же образом вставляем Optimism RPC.
 - Далее вставляем FID и жмем "Enter". Пойдет установка.
@@ -73,16 +81,20 @@
 <h3>Открываем порты:</h3>
 Эти шаги помогут вам открыть порты 2281, 2282 и 2283 с помощью iptables:
 
-    1. sudo apt-get install iptables-persistent
-    
-    2. sudo iptables -A INPUT -p tcp --dport 2281 -j ACCEPT 
-    3. sudo iptables -A INPUT -p tcp --dport 2282 -j ACCEPT 
-    4. sudo iptables -A INPUT -p tcp --dport 2283 -j ACCEPT
-    
-    5. sudo iptables-save > /etc/iptables/rules.v4
-    
-    Чтобы убедиться, что правила были добавлены, выполните:
-    6. sudo iptables -L -v -n
+    sudo apt-get install iptables-persistent
+ <br>
+
+    sudo iptables -A INPUT -p tcp --dport 2281 -j ACCEPT 
+    sudo iptables -A INPUT -p tcp --dport 2282 -j ACCEPT 
+    sudo iptables -A INPUT -p tcp --dport 2283 -j ACCEPT
+ <br>
+
+     sudo iptables-save > /etc/iptables/rules.v4
+<br>
+Чтобы убедиться, что правила были добавлены, выполните:  
+
+    sudo iptables -L -v -n
+
 
 <h3>Дашборд:</h3>
 Переходим к дашборду по ссылке ниже (только заменить Айпи_вашего_сервера на ваш айпишник):
@@ -107,15 +119,18 @@
 
 **Инструкция по обновлению:**
 
+Заходим на сервер и обновляем пакеты:
 
-    1. Заходим на сервер и обновляем пакеты:
-    sudo apt update && sudo apt upgrade -y
+    sudo apt update && sudo apt upgrade -y  
 
-    2. Подключаемся к сессии Hubble в screen'e:
-    screen -r Hubble
+Подключаемся к сессии Hubble в screen'e:
 
-    3. Обновляем ноду:
+    screen -r Hubble  
+
+Обновляем ноду:
+
     cd ~/hubble && ./hubble.sh upgrade
+
 
 
 <h3>RPC</h3>
@@ -127,15 +142,21 @@
 
 Пример как я это делал с zora, по очереди:
 
-    cd node
 
-    export CONDUIT_NETWORK=zora-mainnet
+    cd node
+<br>
+
+    export CONDUIT_NETWORK=zora-mainnet  
+<br>  
 
     nano .env
-    
-    Там где OP_NODE_L1_ETH_RPC= ставишь свой ключ с Ethereum Mainnet
-    
-    docker compose down
+ <br>
+
+**Там где OP_NODE_L1_ETH_RPC= ставишь свой ключ с Ethereum Mainnet**
+
+<br>
+
+    docker compose down  
     docker compose up --build -d
 
 
